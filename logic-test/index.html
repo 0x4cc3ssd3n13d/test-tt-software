@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping online test</title>
+</head>
+<body>
+    <form id="orderForm">
+        <!-- รับค่าเป็น dropdown  -->
+        <label for="product">เลือกสินค้า</label>
+        <select name="product" id="product" required>
+            <option value="">รายการสินค้า</option>
+            <option value="laptop">Laptop</option>
+            <option value="mouse">Mouse</option>
+            <option value="keyboard">Keyboard</option>
+        </select>
+
+        <!-- ระบุจำนวนรับค่าเป็นตัวเลขเท่านั้น -->
+        <label for="qty">จำนวน</label>
+        <input type="number" name="qty" id="qty" min="1" required>
+        <button type="submit">สั่งซื้อ</button>
+    </form>
+
+    <div id="orderOutput"></div>
+    <!-- <div id="cartList"></div> -->
+
+    <!-- รายการคำสั่งซื้อ -->
+    <div id="orderSummary">
+        <h3>รายการสินค้าที่สั่งซื้อ</h3>
+        <ul id="cart_list"></ul>
+    </div>
+    <div>
+        <button type="submit" id="send_order">ส่งคำสั่งซื้อ</button>
+    </div>
+    
+    <br />
+
+    <!-- รายการคำสั่งซื้อทั้งหมด -->
+    <div id="order_list">
+        <h3>คำสั่งซื้อจากลูกค้าทั้งหมด</h3>
+    </div>
+    <div id="complete_order">
+        <button id="completeOrderBtn">จัดการคำสั่งซื้อ</button>
+    </div>
+
+    <div id="stock_qty"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
